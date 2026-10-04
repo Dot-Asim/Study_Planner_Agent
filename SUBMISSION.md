@@ -7,7 +7,7 @@ Agent name: StudyPlan Builder
 Domain: Study-Plan Builder (Timetable + task list -> conflict-aware study plan)
 
 GitHub repository URL: https://github.com/Dot-Asim/Study_Planner_Agent
-Final commit hash: 8417c0e0da6d8978b14476ec59fb2edf2377b561
+Final commit hash: 4023ba670e1ad0a947fce1b6cad08dc2a14557e5
 Working agent interface: https://study-planner-agent-b6n9.onrender.com/
 Health endpoint (GET): https://study-planner-agent-b6n9.onrender.com/health
 Arena endpoint (POST): https://study-planner-agent-b6n9.onrender.com/arena/run
