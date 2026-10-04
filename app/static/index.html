@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Study-Plan Builder Agent</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><i class="fas fa-book-open" style="margin-right: 10px;"></i>Study-Plan Builder</h1>
+      <p>An autonomous, conflict-aware study session scheduler</p>
+      <a href="/docs" target="_blank"><i class="fas fa-file-code" style="margin-right: 5px;"></i>API Documentation</a>
+    </header>
+
+    <main>
+      <section>
+        <div class="controls-row">
+          <div>
+            <label for="model"><i class="fas fa-robot" style="margin-right: 5px;"></i>Available model</label>
+            <select id="model"></select>
+          </div>
+          <button id="reset" type="button"><i class="fas fa-sync-alt" style="margin-right: 5px;"></i>New chat</button>
+        </div>
+
+        <div id="messages" aria-live="polite"></div>
+
+        <form id="chat" style="margin-top: 1rem;">
+          <label for="task"><i class="fas fa-comment-dots" style="margin-right: 5px;"></i>Your request</label>
+          <textarea id="task" required maxlength="10000" placeholder="e.g. I have a Math assignment due Friday (needs 3 hours). Schedule it."></textarea>
+          <button id="send" style="width: 100%; margin-top: 1rem;"><i class="fas fa-paper-plane" style="margin-right: 5px;"></i>Send to Agent</button>
+        </form>
+      </section>
+
+      <aside>
+        <h2><i class="fas fa-database" style="margin-right: 5px;"></i>Context & Observations</h2>
+        <label for="external">Untrusted external note (optional)</label>
+        <textarea id="external" maxlength="10000" placeholder="Additional info to pass to the agent..."></textarea>
+        <p id="memory" style="font-size: 0.9rem; color: var(--text-muted); margin-top: 1rem;"><i class="fas fa-history" style="margin-right: 5px;"></i>0 messages in this chat</p>
+        
+        <h3 style="font-size: 1rem; margin: 1rem 0 0.5rem;"><i class="fas fa-eye" style="margin-right: 5px;"></i>Observations</h3>
+        <pre id="observations">No observations yet.</pre>
+        
+        <h2 style="margin-top: 2rem;"><i class="fas fa-running" style="margin-right: 5px;"></i>Current Run</h2>
+        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+          <span style="font-weight: 600; margin-right: 10px;">Status:</span>
+          <span id="status" role="status" style="padding: 4px 12px; background: rgba(99, 102, 241, 0.1); color: var(--primary-color); border-radius: 20px; font-weight: 600; font-size: 0.9rem;">Idle</span>
+        </div>
+        <h3 style="font-size: 1rem; margin: 1rem 0 0.5rem;"><i class="fas fa-list-ul" style="margin-right: 5px;"></i>Action Trace</h3>
+        <pre id="trace">No tool calls yet.</pre>
+      </aside>
+    </main>
+
+    <footer>
+      <p><i class="fas fa-info-circle" style="margin-right: 5px;"></i>Memory is temporary. Reloading starts a new chat.</p>
+      <p><strong>Security Warning:</strong> Never paste real API keys into this interface.</p>
+    </footer>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

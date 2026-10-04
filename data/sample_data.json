@@ -1,0 +1,13 @@
+{
+  "timetable": {
+    "Monday": [{"start": "09:00", "end": "11:00", "title": "Math Class"}, {"start": "13:00", "end": "15:00", "title": "Physics Class"}],
+    "Tuesday": [{"start": "10:00", "end": "12:00", "title": "CS Class"}],
+    "Wednesday": [{"start": "09:00", "end": "11:00", "title": "Math Class"}],
+    "Thursday": [{"start": "10:00", "end": "12:00", "title": "CS Class"}, {"start": "14:00", "end": "17:00", "title": "Physics Lab"}],
+    "Friday": [{"start": "09:00", "end": "12:00", "title": "Free block"}]
+  },
+  "pending_tasks": [
+    {"id": "t1", "title": "Math Assignment", "duration_hours": 3, "deadline": "Friday"},
+    {"id": "t2", "title": "Physics Lab Report", "duration_hours": 2, "deadline": "Thursday"}
+  ]
+}
