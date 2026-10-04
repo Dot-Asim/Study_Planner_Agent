@@ -1,11 +1,11 @@
 {
   "arena_version": "0.1",
-  "agent_name": "Student Starter",
-  "domain": "Choose your domain",
-  "description": "Incomplete scaffold; agent must be implemented",
+  "agent_name": "StudyPlan Builder",
+  "domain": "Study-Plan Builder (Timetable + task list -> conflict-aware study plan)",
+  "description": "Conflict-aware study plan builder agent that inspects timetable, pending tasks, and schedules study sessions without class overlap.",
   "endpoint": "/arena/run",
   "health_endpoint": "/health",
-  "implementation": "starter",
+  "implementation": "implemented",
   "fault_types": [
     "none",
     "tool_timeout",
